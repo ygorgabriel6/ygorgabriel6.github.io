@@ -120,8 +120,7 @@ nav {
 
 @media (max-width: 800px) {
   .title-hd {
-    margin: 0px;
-    margin-top: 10px;
+    margin-top: 10px 0px 0px 0px;
     justify-content: center;
   }
   nav {
