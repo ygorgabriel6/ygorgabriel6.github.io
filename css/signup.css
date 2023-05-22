@@ -1,0 +1,146 @@
+body {
+  margin: 0px;
+  font-family: arial;
+  
+}
+.bg-img {
+  background-image: url(/img/bg-forest.svg);
+  background-size: cover;
+  height: 100vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.bird-gif{
+  background-image: url(/img/birds.webp);
+  background-repeat: repeat-x;
+  width: 450px;
+  height: 200px;
+  position: fixed;
+}
+
+.bg-cont {
+  display: grid;
+  place-content: center;
+  
+  
+}
+
+.btn-home {
+  display: flex;
+  padding: 10px 20px;
+  font-size: 20px;
+  justify-content: end;
+  opacity: 0.9;
+}
+.btn-home a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: white;
+  background-color: #78c7ff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.btn-home a:hover {
+  background-color: dodgerblue;
+}
+.around-box {
+  display: grid;
+  padding: 25px 100px;
+  border: 5px inset #78c7ff;
+  border-radius: 10%;
+  font-size: 15px;
+}
+.bg-legend {
+  font-size: 30px;
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bg-legend{
+  animation: sglg-animation 3s alternate infinite ease-in-out;
+
+}
+@keyframes sglg-animation{
+  from{
+    background-color: dodgerblue;
+    color: #e7e7e7e7 ;
+  }
+  to{
+    background: #78c7ff;
+    color: white;
+  }
+}
+
+.input-box {
+  display: grid;
+  gap: 10px;
+}
+.input-user {
+  grid-row: 2;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  opacity: 0.6;
+  color: black;
+  font-size: 20px;
+  outline: none;
+}
+.input-user:hover, :focus{
+opacity: 1;
+}
+label {
+  margin-top: 10px;
+  color: white;
+  line-height: 1.5;
+}
+.input-student-box {
+  display: inline-block;
+  margin: 20px;
+}
+
+.input-director-box {
+  display: inline-block;
+  margin: 20px;
+}
+input[type="radio"] {
+  width: 20px;
+  height: 25px;
+  vertical-align: middle;
+}
+.btn-submit {
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color:#78c7ff ;
+  opacity: 0.9;
+  font-size: 20px;
+}
+.btn-submit:hover {
+  background-color: dodgerblue;
+  color: white;
+  opacity: 1;
+}
+
+/*
+LINHA DE TESTE N1
+----------------------------------
+.inputBox-change{
+  display: grid;
+grid-template-columns: 1fr 1fr;
+  align-items:center;
+  
+  row-gap: 10px;
+}
+#input-student {
+  grid-area: 2/2/1/3;
+  justify-self: start;
+}
+#input-director{
+  grid-area: 2/2/2/3;
+  justify-self: start;
+}*/
