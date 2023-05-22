@@ -1,16 +1,14 @@
 html {
-  scroll-behavior: smooth !important;
-}
-body {
-  margin: 0px;
+  scroll-behavior: smooth !important; 
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  margin: 10px;
-  background-image: url(/img/Default_a_dad_fishing_with_son_in_a_river_with_a_sunset_backgr_0_7084115b-9f51-472f-9b6f-7046aa94dd30_1.jpg);
-  background-size: contain;
-  background-repeat: repeat;
 }
-
+body {
+background-image: url(/img/Default_a_dad_fishing_with_son_in_a_river_with_a_sunset_backgr_0_7084115b-9f51-472f-9b6f-7046aa94dd30_1.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
 li,
 a {
   text-decoration: none;
@@ -28,10 +26,6 @@ section:target {
 .img-logo {
   background-color: rgb(210, 180, 140);
   border-radius: 25%;
-}
-.img-main {
-  display: grid;
-  place-content: center start;
 }
 
 @keyframes Log-animation {
@@ -142,15 +136,26 @@ nav {
   margin-top: 300px;
   margin-bottom: 130px;
   color: white;
+  align-items: center;
+  
 }
+.title-pm {
+  grid-column: 1/-1;
+  margin-left: 30px;
+ }
+ .img-main {
+  display: grid;
+align-self: start;
+margin-top: -100px;
+}
+
+
 .txt-main,
 .italic-main {
-  font-weight: 100;
-  place-self: center end;
   line-height: 1.5;
   font-size: 25px;
   margin: 0px;
-  place-self: start center;
+  
 }
 .txt-contain {
   display: grid;
@@ -158,11 +163,40 @@ nav {
   gap: 60px;
   position: relative;
 }
-.title-pm {
-  justify-self: center;
-  align-self: end;
-}
 
+
+@media(max-width:1100px){
+  .main-contain{
+   margin-top:250px;
+  }
+  .txt-main{
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-left: 30px;
+}
+.title-pm{
+font-size: 30px;
+font-weight: 900;
+text-align: start;
+margin-bottom: 0px;
+}
+.book-gif{
+  width: 400px;
+  margin: 0px;
+}
+.img-main {
+   align-self: center;
+  }
+}
+@media(max-width:800px){
+  .book-gif{
+    width: 300px;
+    
+  }
+  
+
+}
 /* .btn-main {
   color: white;
   font-size: 20px;
