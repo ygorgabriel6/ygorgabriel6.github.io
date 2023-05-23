@@ -1,13 +1,13 @@
 html {
-  scroll-behavior: smooth !important; 
+  scroll-behavior: smooth !important;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 body {
-background-image: url(/img/Default_a_dad_fishing_with_son_in_a_river_with_a_sunset_backgr_0_7084115b-9f51-472f-9b6f-7046aa94dd30_1.jpg);
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+  background-image: url(/img/Default_a_dad_fishing_with_son_in_a_river_with_a_sunset_backgr_0_7084115b-9f51-472f-9b6f-7046aa94dd30_1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 li,
 a {
@@ -24,19 +24,9 @@ section:target {
 
 /*Imagens*/
 .img-logo {
-  background-color: rgb(210, 180, 140);
   border-radius: 25%;
 }
 
-@keyframes Log-animation {
-  from {
-    background-color: white;
-  }
-  to {
-    background-color: #011727;
-    border-radius: 50%;
-  }
-}
 .img-logo {
   animation: Log-animation 3s alternate infinite ease-in-out;
 }
@@ -63,7 +53,25 @@ section:target {
   padding-right: 10px;
   border-radius: 15px;
   color: white;
+  background: linear-gradient(
+    to left,
+    #011727,
+    dodgerblue,
+    #011727,
+    rgb(43, 115, 187),
+    #011727
+  );
+  background-size: 1000% 100%;
+  animation: gradient-animation 4s infinite alternate;
   gap: 10px;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
 }
 
 /*Bloco de navegação */
@@ -86,7 +94,7 @@ nav {
   border: none;
   transition: 0.2s;
   background-color: dodgerblue;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .btn-nav:hover {
   background-color: #78c7ff;
@@ -100,26 +108,24 @@ nav {
 
 @media (max-width: 1200px) {
   .head-contain {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
   }
   .title-hd {
-    margin: 10px 0px 0px 20px;
-
-    justify-content: center;
+    margin: 10px auto 10px auto;
   }
   nav {
-    justify-content: center;
+    margin: 0px auto 0px auto;
   }
 }
 
 @media (max-width: 800px) {
   .title-hd {
-    margin: 0px;
-    margin-top: 10px;
+    margin: 10px auto 10px auto;
     justify-content: center;
   }
   nav {
-    justify-content: center;
+    margin: 0px auto 0px auto;
   }
   .nav-head {
     gap: 10px;
@@ -137,25 +143,25 @@ nav {
   margin-bottom: 130px;
   color: white;
   align-items: center;
-  
 }
 .title-pm {
-  grid-column: 1/-1;
+  color: white;
+  font-size: 45px;
   margin-left: 30px;
- }
- .img-main {
-  display: grid;
-align-self: start;
-margin-top: -100px;
+  text-align: center;
 }
-
-
+.img-main {
+  display: grid;
+  align-self: center;
+}
 .txt-main,
 .italic-main {
+  color: white;
+  font-weight: 600;
   line-height: 1.5;
   font-size: 25px;
+  text-align: center;
   margin: 0px;
-  
 }
 .txt-contain {
   display: grid;
@@ -164,57 +170,56 @@ margin-top: -100px;
   position: relative;
 }
 
-
-@media(max-width:1100px){
-  .main-contain{
-   margin-top:250px;
+@media (max-width: 1100px) {
+  .main-contain {
+    margin-top: 250px;
+    margin-bottom: 0px;
   }
-  .txt-main{
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-  margin-left: 30px;
-}
-.title-pm{
-font-size: 30px;
-font-weight: 900;
-text-align: start;
-margin-bottom: 0px;
-}
-.book-gif{
-  width: 400px;
-  margin: 0px;
-}
-.img-main {
-   align-self: center;
+  .txt-main {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: 30px;
+  }
+  .title-pm {
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .book-gif {
+    width: 400px;
+    margin: 0px;
+  }
+  .img-main {
+    align-self: center;
   }
 }
-@media(max-width:800px){
-  .book-gif{
+@media (max-width: 800px) {
+  .book-gif {
     width: 300px;
-    
   }
-  
+  .main-contain {
+    grid-template-columns: 1fr;
+    margin-bottom: 0px;
+    margin-top: 200px;
+  }
+  .title-pm {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
 
+  .txt-main,
+  .italic-main {
+    font-size: 20px;
+  }
+  .img-main {
+    justify-self: center;
+    margin-top: -150px;
+  }
 }
-/* .btn-main {
-  color: white;
-  font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  place-self: start;
-  position: absolute;
-  margin-top: 500px;
-  background: linear-gradient(to bottom, #629dc7, #78c7ff);
-  transition: 0.5s;
-} 
-.btn-main:hover {
-  transition: 0.3s;
-  background: linear-gradient(to top, #ffffff, #78c7ff);
-  border: 2px outset #78c7ff;
-  border-radius: 20px;
-}
-*/
+
 /* Historia/sobre */
 .linha {
   border: 1px solid dodgerblue;
@@ -223,16 +228,28 @@ margin-bottom: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
   margin: 30px 20px;
-  line-height: 30px;
+  line-height: 1.5;
 }
 .sobre-txt,
 p {
+  font-weight: 600;
   font-size: 25px;
 }
 .title-sobre {
   text-align: center;
   font-size: 50px;
 }
+@media (max-width: 1100px) {
+  .title-sobre {
+    font-size: 30px;
+    margin-top: 80px;
+  }
+  .sobre-txt,
+  p {
+    font-size: 20px;
+  }
+}
+/* FOOTER */
 .img-footer {
   width: 50px;
   height: 50px;
@@ -243,7 +260,6 @@ p {
   margin: 80px 0px;
   color: white;
 }
-
 .footer-backgroung {
   display: flex;
   flex-wrap: wrap;
@@ -270,4 +286,28 @@ a {
   color: white;
   margin-top: 60px;
   margin-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  .img-footer {
+    width: 32px;
+    height: 32px;
+  }
+  .contato-footer {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 800px) {
+ 
+  .footer-backgroung{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: start;
+    justify-items: start;
+    gap: 20px;
+    
+  }
+  .contato-footer{
+    margin-bottom: 30px;
+  }
 }
