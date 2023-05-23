@@ -60,20 +60,25 @@ body {
   margin-right: auto;
 }
 .bg-legend{
-  animation: sglg-animation 3s alternate infinite ease-in-out;
-
+background: linear-gradient(
+  to left,
+  rgb(125, 181, 238),
+  dodgerblue,
+  white,
+  dodgerblue,
+  rgb(125, 181, 238)
+);
+background-size: 1000% 100%;
+animation: gradient-animation 4s infinite alternate;
 }
-@keyframes sglg-animation{
-  from{
-    background-color: dodgerblue;
-    color: #e7e7e7e7 ;
-  }
-  to{
-    background: #78c7ff;
-    color: white;
-  }
+@keyframes gradient-animation {
+0% {
+  background-position-x: 0%;
 }
-
+100% {
+  background-position-x: 100%;
+}
+}
 .input-box {
   display: grid;
   gap: 10px;

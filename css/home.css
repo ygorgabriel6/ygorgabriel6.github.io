@@ -133,6 +133,12 @@ nav {
     margin-left: 5px;
   }
 }
+@media (max-width: 650px){
+.nav-head{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
 
 /*Conteudo principal*/
 
@@ -309,5 +315,8 @@ a {
   }
   .contato-footer{
     margin-bottom: 30px;
+  }
+  .copy-footer{
+    font-size: 10px;
   }
 }
