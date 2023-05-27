@@ -1,6 +1,12 @@
-body{
+body {
+  display: grid;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(/img/bg-forest.svg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
 .btn-submit-login {
   padding: 20px;
@@ -8,7 +14,7 @@ body{
   border-radius: 10px;
   border: none;
   color: white;
-  background-color:#78c7ff ;
+  background-color: #78c7ff;
   opacity: 0.9;
   font-size: 20px;
   margin-top: 30px;
@@ -20,9 +26,11 @@ body{
 }
 .btn-home-login {
   display: flex;
+  height: 30px;
   padding: 10px 20px;
   font-size: 20px;
-  justify-content: end;
+  justify-self: end;
+  align-items: start;
   opacity: 0.9;
 }
 .btn-home-login a {
@@ -35,6 +43,37 @@ body{
 }
 .btn-home-login a:hover {
   background-color: dodgerblue;
+}
+.bg-cont {
+  justify-self: center;
+}
+.bg-legend {
+  font-size: 30px;
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(
+    to left,
+    rgb(125, 181, 238),
+    dodgerblue,
+    white,
+    dodgerblue,
+    rgb(125, 181, 238)
+  );
+  background-size: 1000% 100%;
+  animation: gradient-animation 4s infinite alternate;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
 }
 .around-box-login {
   width: 300px;
@@ -49,7 +88,12 @@ body{
   gap: 10px;
   margin-bottom: 30px;
 }
-
+label {
+  font-size: 25px;
+  margin-top: 10px;
+  color: white;
+  line-height: 1.5;
+}
 .input-user-login {
   grid-row: 2;
   padding: 20px;
@@ -60,6 +104,45 @@ body{
   font-size: 20px;
   outline: none;
 }
-.input-user-login:hover, :focus{
-opacity: 1;
+.input-user-login:hover,
+:focus {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  .btn-home {
+    font-size: 15px;
+  }
+
+  .bg-legend {
+    padding: 5px;
+    font-size: 25px;
+  }
+  label {
+    font-size: 15px;
+    justify-self: center;
+  }
+  .around-box-login {
+    display: grid;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    height: 400px;
+  }
+
+  .input-box-login {
+    margin: 0px;
+  }
+  .input-user-login {
+    padding: 5px;
+    justify-self: center;
+    font-size: 15px;
+  }
+  .btn-login{
+    display: grid;
+    justify-items: center;
+  }
+  .btn-submit-login {
+    font-size: 15px;
+   width: 250px;
+  }
 }
