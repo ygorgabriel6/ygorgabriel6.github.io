@@ -26,15 +26,13 @@ body {
 }
 .btn-home-login {
   display: flex;
-  height: 30px;
   padding: 10px 20px;
   font-size: 20px;
-  justify-self: end;
-  align-items: start;
   opacity: 0.9;
+  justify-content: center;
+  gap: 20px;
 }
 .btn-home-login a {
-  margin-right: 20px;
   text-decoration: none;
   color: white;
   background-color: #78c7ff;
@@ -45,6 +43,10 @@ body {
   background-color: dodgerblue;
 }
 .bg-cont {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 20px;
   justify-self: center;
 }
 .bg-legend {

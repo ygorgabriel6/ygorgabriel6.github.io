@@ -10,18 +10,19 @@ body {
 }
 
 .bg-cont {
-  place-self: center;
- 
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 20px;
+  justify-self: center;
 }
 
 .btn-home {
   display: flex;
-  margin: 10px 20px;
+  padding: 10px 20px;
   font-size: 20px;
-  justify-self: end;
-  align-items: start;
- height: 20px;
   opacity: 0.9;
+  justify-content: center;
 }
 .btn-home a {
   margin-right: 30px;
@@ -127,9 +128,7 @@ input[type="radio"] {
   .btn-home {
     font-size: 15px;
   }
-  .bg-cont {
-    
-  }
+  
   .bg-legend {
     padding: 5px;
     font-size: 25px;
