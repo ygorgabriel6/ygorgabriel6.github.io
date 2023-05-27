@@ -1,5 +1,6 @@
 body {
   display: grid;
+  grid-template-rows: auto 1fr;
   margin: 0px;
   font-family: arial;
   background-image: url(/img/bg-forest.svg);
@@ -8,7 +9,9 @@ body {
   background-position: bottom;
   min-height: 100vh;
 }
-
+li{
+  list-style: none;
+}
 .bg-cont {
   display: flex;
   flex-direction: column;
@@ -17,12 +20,18 @@ body {
   justify-self: center;
 }
 
+.btn-nav-home{
+  display: flex;
+  padding-left: 0px;
+  gap: 20px;
+}
+
 .btn-home {
   display: flex;
   padding: 10px 20px;
   font-size: 20px;
   opacity: 0.9;
-  justify-content: center;
+  justify-content: end;
 }
 .btn-home a {
   margin-right: 30px;
@@ -128,7 +137,10 @@ input[type="radio"] {
   .btn-home {
     font-size: 15px;
   }
-  
+  .bg-cont{
+    margin: 30px;
+    align-self: start;
+  }
   .bg-legend {
     padding: 5px;
     font-size: 25px;

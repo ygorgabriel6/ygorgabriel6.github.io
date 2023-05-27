@@ -1,5 +1,6 @@
 body {
   display: grid;
+  grid-template-rows: auto 1fr;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(/img/bg-forest.svg);
@@ -7,6 +8,9 @@ body {
   background-repeat:no-repeat;
   background-position: center;
   min-height: 100vh;
+}
+li{
+  list-style: none;
 }
 .btn-submit-login {
   padding: 20px;
@@ -24,13 +28,17 @@ body {
   color: white;
   opacity: 1;
 }
+.btn-nav-home{
+  display: flex;
+  padding-left: 0px;
+  gap: 20px;
+}
 .btn-home-login {
   display: flex;
   padding: 10px 20px;
   font-size: 20px;
   opacity: 0.9;
-  justify-content: center;
-  gap: 20px;
+  justify-content: end;
 }
 .btn-home-login a {
   text-decoration: none;
@@ -78,12 +86,14 @@ body {
   }
 }
 .around-box-login {
+  display: grid;
   width: 300px;
   height: 500px;
   padding: 25px 100px;
   border: 5px inset #78c7ff;
   border-radius: 10%;
   font-size: 15px;
+
 }
 .input-box-login {
   display: grid;
@@ -111,10 +121,17 @@ label {
   opacity: 1;
 }
 @media (max-width: 800px) {
+  .bg-cont{
+    margin: 30px;
+    align-self: start;
+  justify-self: center;
+  }
   .btn-home {
     font-size: 15px;
   }
-
+.bg-form{
+  margin-top:50px;
+}
   .bg-legend {
     padding: 5px;
     font-size: 25px;
@@ -123,9 +140,8 @@ label {
     font-size: 15px;
     justify-self: center;
   }
+
   .around-box-login {
-    display: grid;
-    align-content: center;
     margin: 0px;
     padding: 0px;
     height: 400px;
